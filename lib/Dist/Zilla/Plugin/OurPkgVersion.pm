@@ -3,7 +3,7 @@ use warnings;
 use 5.010;
 package Dist::Zilla::Plugin::OurPkgVersion;
 BEGIN {
-	# VERSION
+	our $VERSION = 0.1.0;# VERSION
 }
 use Moose;
 with (
@@ -70,6 +70,18 @@ sub munge_perl {
 __PACKAGE__->meta->make_immutable;
 1;
 # ABSTRACT: no line insertion and does Package version with our
+
+
+__END__
+=pod
+
+=head1 NAME
+
+Dist::Zilla::Plugin::OurPkgVersion - no line insertion and does Package version with our
+
+=head1 VERSION
+
+version 0.1.0
 
 =head1 SYNOPSIS
 
@@ -147,3 +159,18 @@ C<our $VERSION> line anywhere in the file before C<# VERSION> as many times as
 you've written C<# VERSION> regardless of whether or not inserting it there is
 a good idea. OurPkgVersion will not insert a version unless you have C<#
 VERSION> so it is a bit more work.
+
+=head1 AUTHOR
+
+Caleb Cushing <xenoterracide@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2010 by Caleb Cushing.
+
+This is free software, licensed under:
+
+  The Artistic License 2.0
+
+=cut
+

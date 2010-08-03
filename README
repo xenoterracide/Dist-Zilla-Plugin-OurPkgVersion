@@ -1,0 +1,92 @@
+NAME
+    Dist::Zilla::Plugin::OurPkgVersion - no line insertion and does Package
+    version with our
+
+VERSION
+    version 0.1.0
+
+SYNOPSIS
+    in dist.ini
+
+            [OurPkgVersion]
+
+    in your modules
+
+            # VERSION
+
+DESCRIPTION
+    This module was created as an alternative to
+    Dist::Zilla::Plugin::PkgVersion and uses some code from that module.
+    This module is designed to use a the more readable format "our $VERSION
+    = $version;" as well as not change then number of lines of code in your
+    files, which will keep your repository more in sync with your CPAN
+    release. It also allows you slightly more freedom in how you specify
+    your version.
+
+  EXAMPLES
+    in dist.ini
+
+            ...
+            version = 0.01;
+            [OurPkgVersion]
+
+    in lib/My/Module.pm
+
+            package My::Module;
+            # VERSION
+            ...
+
+    output lib/My/Module.pm
+
+            package My::Module;
+            our $VERSION = 0.01;# VERSION
+            ...
+
+    please note that whitespace before the comment is significant so
+
+            package My::Module;
+            BEGIN {
+                    # VERSION
+            }
+            ...
+
+    becomes
+
+            package My::Module;
+            BEGIN {
+                    our $VERSION = 0.01;# VERSION
+            }
+            ...
+
+    while
+
+            package My::Module;
+            BEGIN {
+            # VERSION
+            }
+            ...
+
+    becomes
+
+            package My::Module;
+            BEGIN {
+            our $VERSION = 0.01;# VERSION
+            }
+            ...
+
+    Also note, the package line is not in any way significant, it will
+    insert the "our $VERSION" line anywhere in the file before "# VERSION"
+    as many times as you've written "# VERSION" regardless of whether or not
+    inserting it there is a good idea. OurPkgVersion will not insert a
+    version unless you have "# VERSION" so it is a bit more work.
+
+AUTHOR
+    Caleb Cushing <xenoterracide@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is Copyright (c) 2010 by Caleb Cushing.
+
+    This is free software, licensed under:
+
+      The Artistic License 2.0
+
