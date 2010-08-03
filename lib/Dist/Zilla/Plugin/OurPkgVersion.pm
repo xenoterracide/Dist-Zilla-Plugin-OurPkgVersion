@@ -17,13 +17,6 @@ use PPI;
 use Carp qw(croak);
 use namespace::autoclean;
 
-#sub munge_files {
-#	my ( $self ) = shift;
-#	my $_;
-
-#	$self->munge_file($_) for @{ $self->found_files };
-#}
-
 sub munge_file {
 	my ( $self, $file ) = @_;
 	my $_;
@@ -33,10 +26,10 @@ sub munge_file {
 			return;
 		}
 		when ( /\.(?:pm|pl)$/i ) {
-			return $self->munge_perl($file);
+			return $self->_munge_perl($file);
 		}
 		when ( $file->content =~ /^#!(?:.*)perl(?:$|\s)/ ) {
-			return $self->munge_perl($file);
+			return $self->_munge_perl($file);
 		}
 		default {
 			return;
@@ -44,7 +37,7 @@ sub munge_file {
 	}
 }
 
-sub munge_perl {
+sub _munge_perl {
 	my ( $self, $file ) = @_;
 	my $_;
 
