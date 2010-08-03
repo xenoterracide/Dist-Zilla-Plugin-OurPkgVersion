@@ -26,7 +26,7 @@ sub munge_files {
 
 sub munge_file {
 	my ( $self, $file ) = @_;
-#	my $_;
+	my $_;
 
 	given ( $file->name ) {
 		when ( /\.t$/i ) {
@@ -70,3 +70,80 @@ sub munge_perl {
 __PACKAGE__->meta->make_immutable;
 1;
 # ABSTRACT: no line insertion and does Package version with our
+
+=head1 SYNOPSIS
+
+in dist.ini
+
+	[OurPkgVersion]
+
+in your modules
+
+	# VERSION
+
+=head1 DESCRIPTION
+
+This module was created as an alternative to
+L<Dist::Zilla::Plugin::PkgVersion> and uses some code from that module. This
+module is designed to use a the more readable format C<our $VERSION =
+$version;> as well as not change then number of lines of code in your files,
+which will keep your repository more in sync with your CPAN release. It also
+allows you slightly more freedom in how you specify your version.
+
+=head2 EXAMPLES
+
+in dist.ini
+
+	...
+	version = 0.01;
+	[OurPkgVersion]
+
+in lib/My/Module.pm
+
+	package My::Module;
+	# VERSION
+	...
+
+output lib/My/Module.pm
+
+	package My::Module;
+	our $VERSION = 0.01;# VERSION
+	...
+
+please note that whitespace before the comment is significant so
+
+	package My::Module;
+	BEGIN {
+		# VERSION
+	}
+	...
+
+becomes
+
+	package My::Module;
+	BEGIN {
+		our $VERSION = 0.01;# VERSION
+	}
+	...
+
+while
+
+	package My::Module;
+	BEGIN {
+	# VERSION
+	}
+	...
+
+becomes
+
+	package My::Module;
+	BEGIN {
+	our $VERSION = 0.01;# VERSION
+	}
+	...
+
+Also note, the package line is not in any way significant, it will insert the
+C<our $VERSION> line anywhere in the file before C<# VERSION> as many times as
+you've written C<# VERSION> regardless of whether or not inserting it there is
+a good idea. OurPkgVersion will not insert a version unless you have C<#
+VERSION> so it is a bit more work.
