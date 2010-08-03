@@ -2,4 +2,4 @@ Revision history for Dist-Zilla-Plugin-OurPkgVersion
 {{$NEXT}}
 
 0.1.0     Aug 03 2010
-	-
+	- initial release
