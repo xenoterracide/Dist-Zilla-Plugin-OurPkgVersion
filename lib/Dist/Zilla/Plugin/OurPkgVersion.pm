@@ -17,6 +17,13 @@ use PPI;
 use Carp qw(croak);
 use namespace::autoclean;
 
+sub munge_files {
+	my $self = shift;
+	my $_;
+
+	$self->munge_file($_) for @{ $self->found_files };
+}
+
 sub munge_file {
 	my ( $self, $file ) = @_;
 	my $_;
@@ -144,6 +151,11 @@ VERSION> so it is a bit more work.
 =head1 METHODS
 
 =over
+
+=item munge_files
+
+Override the default provided by L<Dist::Zilla::Role::FileMunger> to limit
+the number of files to search to only be modules and executables.
 
 =item munge_file
 
