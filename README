@@ -80,6 +80,10 @@ DESCRIPTION
     inserting it there is a good idea. OurPkgVersion will not insert a
     version unless you have "# VERSION" so it is a bit more work.
 
+METHODS
+    munge_file
+        tells which files to munge, see Dist::Zilla::Role::FileMunger
+
 AUTHOR
     Caleb Cushing <xenoterracide@gmail.com>
 
