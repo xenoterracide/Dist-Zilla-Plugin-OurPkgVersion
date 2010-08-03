@@ -140,3 +140,15 @@ C<our $VERSION> line anywhere in the file before C<# VERSION> as many times as
 you've written C<# VERSION> regardless of whether or not inserting it there is
 a good idea. OurPkgVersion will not insert a version unless you have C<#
 VERSION> so it is a bit more work.
+
+=head1 METHODS
+
+=over
+
+=item munge_file
+
+tells which files to munge, see L<Dist::Zilla::Role::FileMunger>
+
+=back
+
+=cut
