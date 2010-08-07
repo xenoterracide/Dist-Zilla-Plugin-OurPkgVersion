@@ -19,6 +19,8 @@ meta-spec:
 name: Dist-Zilla-Plugin-OurPkgVersion
 requires:
   Carp: 0
+  Dist::Zilla::Role::FileFinderUser: 0
+  Dist::Zilla::Role::FileMunger: 0
   Moose: 0
   PPI: 0
   namespace::autoclean: 0
