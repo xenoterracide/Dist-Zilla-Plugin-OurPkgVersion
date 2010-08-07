@@ -81,6 +81,11 @@ DESCRIPTION
     version unless you have "# VERSION" so it is a bit more work.
 
 METHODS
+    munge_files
+        Override the default provided by Dist::Zilla::Role::FileMunger to
+        limit the number of files to search to only be modules and
+        executables.
+
     munge_file
         tells which files to munge, see Dist::Zilla::Role::FileMunger
 
