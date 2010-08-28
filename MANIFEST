@@ -18,3 +18,4 @@ t/release-kwalitee.t
 t/release-minimum-version.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
+t/release-unused-vars.t
