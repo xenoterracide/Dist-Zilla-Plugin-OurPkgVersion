@@ -28,26 +28,6 @@ sub munge_file {
 	my ( $self, $file ) = @_;
 	my $_;
 
-	given ( $file->name ) {
-		when ( /\.t$/i ) {
-			return;
-		}
-		when ( /\.(?:pm|pl)$/i ) {
-			return $self->_munge_perl($file);
-		}
-		when ( $file->content =~ /^#!(?:.*)perl(?:$|\s)/ ) {
-			return $self->_munge_perl($file);
-		}
-		default {
-			return;
-		}
-	}
-}
-
-sub _munge_perl {
-	my ( $self, $file ) = @_;
-	my $_;
-
 	my $version = $self->zilla->version;
 
 	croak("invalid characters in version") if $version !~ /\A[.0-9_]+\z/;
@@ -59,7 +39,7 @@ sub _munge_perl {
 
 	my $comments = $doc->find('PPI::Token::Comment');
 
-	foreach ( @{$comments} ) {
+	foreach ( @{ $comments } ) {
 		if ( /^(\s*)(#\s+VERSION\b)$/ ) {
 			my $code = "$1" . 'our $VERSION = ' . "$version;$2\n";
 			$_->set_content("$code");
