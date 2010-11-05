@@ -18,14 +18,12 @@ use namespace::autoclean;
 
 sub munge_files {
 	my $self = shift;
-	my $_;
 
 	$self->munge_file($_) for @{ $self->found_files };
 }
 
 sub munge_file {
 	my ( $self, $file ) = @_;
-	my $_;
 
 	my $version = $self->zilla->version;
 
