@@ -1,6 +1,5 @@
 use strict;
 use warnings;
-use 5.010;
 package Dist::Zilla::Plugin::OurPkgVersion;
 BEGIN {
 	# VERSION
@@ -39,13 +38,19 @@ sub munge_file {
 
 	my $comments = $doc->find('PPI::Token::Comment');
 
-	foreach ( @{ $comments } ) {
-		if ( /^(\s*)(#\s+VERSION\b)$/ ) {
-			my $code = "$1" . 'our $VERSION = ' . "$version;$2\n";
-			$_->set_content("$code");
+	if ( ref($comments) eq 'ARRAY' ) {
+		foreach ( @{ $comments } ) {
+			if ( /^(\s*)(#\s+VERSION\b)$/ ) {
+				my $code = "$1" . 'our $VERSION = ' . "$version;$2\n";
+				$_->set_content("$code");
+			}
 		}
+		$file->content( $doc->serialize );
 	}
-	$file->content( $doc->serialize );
+	else {
+		my $fn = $file->name;
+		$self->log( "File: $fn has no VERSION comment" );
+	}
 }
 __PACKAGE__->meta->make_immutable;
 1;
