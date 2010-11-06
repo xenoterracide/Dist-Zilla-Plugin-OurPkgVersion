@@ -1,3 +1,5 @@
 /Dist-Zilla-Plugin-OurPkgVersion*
-.build
+/corpus/DZT/DZT-*
+*.build
 *.swp
+*.tar.gz
