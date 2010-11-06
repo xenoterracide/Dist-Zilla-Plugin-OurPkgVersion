@@ -1,9 +1,8 @@
 use strict;
 use warnings;
-use 5.010;
 package Dist::Zilla::Plugin::OurPkgVersion;
 BEGIN {
-	our $VERSION = 0.1.2;# VERSION
+	our $VERSION = 0.1.3;# VERSION
 }
 use Moose;
 with (
@@ -19,34 +18,12 @@ use namespace::autoclean;
 
 sub munge_files {
 	my $self = shift;
-	my $_;
 
 	$self->munge_file($_) for @{ $self->found_files };
 }
 
 sub munge_file {
 	my ( $self, $file ) = @_;
-	my $_;
-
-	given ( $file->name ) {
-		when ( /\.t$/i ) {
-			return;
-		}
-		when ( /\.(?:pm|pl)$/i ) {
-			return $self->_munge_perl($file);
-		}
-		when ( $file->content =~ /^#!(?:.*)perl(?:$|\s)/ ) {
-			return $self->_munge_perl($file);
-		}
-		default {
-			return;
-		}
-	}
-}
-
-sub _munge_perl {
-	my ( $self, $file ) = @_;
-	my $_;
 
 	my $version = $self->zilla->version;
 
@@ -59,13 +36,21 @@ sub _munge_perl {
 
 	my $comments = $doc->find('PPI::Token::Comment');
 
-	foreach ( @{$comments} ) {
-		if ( /^(\s*)(#\s+VERSION\b)$/ ) {
-			my $code = "$1" . 'our $VERSION = ' . "$version;$2\n";
-			$_->set_content("$code");
+	if ( ref($comments) eq 'ARRAY' ) {
+		foreach ( @{ $comments } ) {
+			if ( /^(\s*)(#\s+VERSION\b)$/ ) {
+				my $code = "$1" . 'our $VERSION = ' . "$version;$2\n";
+				$_->set_content("$code");
+			}
 		}
+		$file->content( $doc->serialize );
 	}
-	$file->content( $doc->serialize );
+	else {
+		my $fn = $file->name;
+		$self->log( "File: $fn"
+			+ ' has no comments, consider adding a "# VERSION" commment'
+			);
+	}
 }
 __PACKAGE__->meta->make_immutable;
 1;
@@ -81,7 +66,7 @@ Dist::Zilla::Plugin::OurPkgVersion - no line insertion and does Package version 
 
 =head1 VERSION
 
-version 0.1.2
+version 0.1.3
 
 =head1 SYNOPSIS
 

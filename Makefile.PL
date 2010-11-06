@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-BEGIN { require 5.010; }
+
 
 use ExtUtils::MakeMaker 6.31;
 
@@ -12,11 +12,13 @@ my %WriteMakefileArgs = (
   'ABSTRACT' => 'no line insertion and does Package version with our',
   'AUTHOR' => 'Caleb Cushing <xenoterracide@gmail.com>',
   'BUILD_REQUIRES' => {
+    'Dist::Zilla::Tester' => '0',
     'English' => '0',
     'File::Find' => '0',
     'File::Temp' => '0',
     'Scalar::Util' => '0',
-    'Test::More' => '0.94'
+    'Test::More' => '0.94',
+    'perl' => '5.004'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31'
@@ -33,7 +35,7 @@ my %WriteMakefileArgs = (
     'PPI' => '0',
     'namespace::autoclean' => '0'
   },
-  'VERSION' => '0.1.2',
+  'VERSION' => '0.1.3',
   'test' => {
     'TESTS' => 't/*.t'
   }
