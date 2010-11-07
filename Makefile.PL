@@ -35,7 +35,7 @@ my %WriteMakefileArgs = (
     'PPI' => '0',
     'namespace::autoclean' => '0'
   },
-  'VERSION' => '0.1.3',
+  'VERSION' => '0.1.4',
   'test' => {
     'TESTS' => 't/*.t'
   }
