@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Dist::Zilla::Plugin::OurPkgVersion;
 BEGIN {
-	our $VERSION = 0.1.4;# VERSION
+	our $VERSION = 0.1.5;# VERSION
 }
 use Moose;
 with (
@@ -66,7 +66,7 @@ Dist::Zilla::Plugin::OurPkgVersion - no line insertion and does Package version 
 
 =head1 VERSION
 
-version 0.1.4
+version 0.1.5
 
 =head1 SYNOPSIS
 
