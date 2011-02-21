@@ -19,7 +19,7 @@ my $elib_0 = <<'END LIB0';
 use strict;
 use warnings;
 package DZT0;
-our $VERSION = 0.1.0;# VERSION
+our $VERSION = '0.1.0'; # VERSION
 # ABSTRACT: my abstract
 1;
 END LIB0
@@ -29,7 +29,7 @@ use strict;
 use warnings;
 package DZT1;
 BEGIN {
-	our $VERSION = 0.1.0;# VERSION
+	our $VERSION = '0.1.0'; # VERSION
 }
 # ABSTRACT: my abstract
 1;

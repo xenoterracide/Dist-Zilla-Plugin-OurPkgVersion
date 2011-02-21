@@ -1,6 +1,6 @@
+package Dist::Zilla::Plugin::OurPkgVersion;
 use strict;
 use warnings;
-package Dist::Zilla::Plugin::OurPkgVersion;
 BEGIN {
 	our $VERSION = 0.1.5;# VERSION
 }
@@ -20,6 +20,7 @@ sub munge_files {
 	my $self = shift;
 
 	$self->munge_file($_) for @{ $self->found_files };
+	return;
 }
 
 sub munge_file {
@@ -39,7 +40,7 @@ sub munge_file {
 	if ( ref($comments) eq 'ARRAY' ) {
 		foreach ( @{ $comments } ) {
 			if ( /^(\s*)(#\s+VERSION\b)$/ ) {
-				my $code = "$1" . 'our $VERSION = ' . "$version;$2\n";
+				my $code = "$1" . q{our $VERSION = '} . $version . qq{'; $2\n};
 				$_->set_content("$code");
 			}
 		}
@@ -51,6 +52,7 @@ sub munge_file {
 			. ' has no comments, consider adding a "# VERSION" commment'
 			);
 	}
+	return;
 }
 __PACKAGE__->meta->make_immutable;
 1;
@@ -166,11 +168,11 @@ Caleb Cushing <xenoterracide@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2010 by Caleb Cushing.
+This software is Copyright (c) 2011 by Caleb Cushing.
 
 This is free software, licensed under:
 
-  The Artistic License 2.0
+  The Artistic License 2.0 (GPL Compatible)
 
 =cut
 
