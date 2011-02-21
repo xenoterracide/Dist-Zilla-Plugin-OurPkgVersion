@@ -29,7 +29,7 @@ sub munge_file {
 
 	my $version = $self->zilla->version;
 
-	croak("invalid characters in version") if $version !~ /\A[.0-9_]+\z/x;
+	croak("invalid characters in version") if $version !~ /\A[.0-9_]+\z/xm;
 
 	my $content = $file->content;
 
@@ -40,7 +40,7 @@ sub munge_file {
 
 	if ( ref($comments) eq 'ARRAY' ) {
 		foreach ( @{ $comments } ) {
-			if ( /^(\s*)(\#\s+VERSION\b)$/x ) {
+			if ( /^(\s*)(\#\s+VERSION\b)$/xm ) {
 				my $code = "$1" . q{our $VERSION = '} . $version . qq{'; $2\n};
 				$_->set_content("$code");
 			}
