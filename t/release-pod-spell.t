@@ -27,3 +27,4 @@ SubmittingPatches
 dzil
 OurPkgVersion
 ini
+executables
