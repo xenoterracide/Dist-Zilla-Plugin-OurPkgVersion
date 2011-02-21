@@ -9,7 +9,6 @@ build_requires:
   File::Temp: 0
   Scalar::Util: 0
   Test::More: 0.94
-  perl: 5.004
 configure_requires:
   ExtUtils::MakeMaker: 6.31
 dynamic_config: 0
@@ -29,6 +28,7 @@ requires:
   Moose: 0
   PPI: 0
   namespace::autoclean: 0
+  perl: 5.006
 resources:
   bugtracker: http://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion/issues
   repository: git://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion.git
