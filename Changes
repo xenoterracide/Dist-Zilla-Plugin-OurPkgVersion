@@ -1,6 +1,6 @@
 Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
-0.1.5     Feb 21 2011
+0.1.5     2011-02-21
 
 0.1.4     2010-11-06
 	- Remove AutoPrereqs from corpus, don't want to depend on that
