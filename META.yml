@@ -21,6 +21,8 @@ name: Dist-Zilla-Plugin-OurPkgVersion
 no_index:
   directory:
     - corpus
+  file:
+    - perlcritic.rc
 requires:
   Carp: 0
   Dist::Zilla::Role::FileFinderUser: 0
