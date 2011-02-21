@@ -142,7 +142,7 @@ VERSION> so it is a bit more work.
 =item munge_files
 
 Override the default provided by L<Dist::Zilla::Role::FileMunger> to limit
-the number of files to search to only be modules and executables.
+the number of files to search to only be modules and executable's.
 
 =item munge_file
 
