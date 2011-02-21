@@ -40,8 +40,8 @@ sub munge_file {
 
 	if ( ref($comments) eq 'ARRAY' ) {
 		foreach ( @{ $comments } ) {
-			if ( /^(\s*)(#\s+VERSION\b)$/ ) {
-				my $code = "$1" . q{our $VERSION = '} . $version . qq{'; $2\n}x;
+			if ( /^(\s*)(#\s+VERSION\b)$/x ) {
+				my $code = "$1" . q{our $VERSION = '} . $version . qq{'; $2\n};
 				$_->set_content("$code");
 			}
 		}
