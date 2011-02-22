@@ -39,7 +39,7 @@ DESCRIPTION
     output lib/My/Module.pm
 
             package My::Module;
-            our $VERSION = 0.01;# VERSION
+            our $VERSION = '0.01'; # VERSION
             ...
 
     please note that whitespace before the comment is significant so
@@ -54,7 +54,7 @@ DESCRIPTION
 
             package My::Module;
             BEGIN {
-                    our $VERSION = 0.01;# VERSION
+                    our $VERSION = '0.01'; # VERSION
             }
             ...
 
@@ -70,7 +70,7 @@ DESCRIPTION
 
             package My::Module;
             BEGIN {
-            our $VERSION = 0.01;# VERSION
+            our $VERSION = '0.01'; # VERSION
             }
             ...
 

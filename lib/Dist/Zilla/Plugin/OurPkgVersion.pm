@@ -113,7 +113,7 @@ in lib/My/Module.pm
 output lib/My/Module.pm
 
 	package My::Module;
-	our $VERSION = 0.01;# VERSION
+	our $VERSION = '0.01'; # VERSION
 	...
 
 please note that whitespace before the comment is significant so
@@ -128,7 +128,7 @@ becomes
 
 	package My::Module;
 	BEGIN {
-		our $VERSION = 0.01;# VERSION
+		our $VERSION = '0.01'; # VERSION
 	}
 	...
 
@@ -144,7 +144,7 @@ becomes
 
 	package My::Module;
 	BEGIN {
-	our $VERSION = 0.01;# VERSION
+	our $VERSION = '0.01'; # VERSION
 	}
 	...
 
