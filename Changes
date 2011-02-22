@@ -2,6 +2,13 @@ Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
 {{$NEXT}}
 
+0.1.5     2011-02-21
+	- CRITICAL: fix bug where version number wasn't quoted. This would make
+	  multipart versions (e.g. 0.1.0) not evaluate correctly, if you've used
+	  a multipart version with OurPkgVersion, please re-release your module.
+	- make module conform to l3 strictness of Perl::Critic
+	- make changes conform to CPAN::Changes::Spec
+
 0.1.4     2010-11-06
 	- Remove AutoPrereqs from corpus, don't want to depend on that
 
