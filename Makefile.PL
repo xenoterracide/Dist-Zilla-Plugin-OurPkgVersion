@@ -31,6 +31,7 @@ my %WriteMakefileArgs = (
     'Dist::Zilla::Role::FileFinderUser' => '0',
     'Dist::Zilla::Role::FileMunger' => '0',
     'Moose' => '0',
+    'MooseX::Types::Perl' => '0',
     'PPI' => '0',
     'namespace::autoclean' => '0'
   },
