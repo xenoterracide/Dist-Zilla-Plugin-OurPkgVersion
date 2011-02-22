@@ -1,0 +1,65 @@
+{
+   "abstract" : "no line insertion and does Package version with our",
+   "author" : [
+      "Caleb Cushing <xenoterracide@gmail.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110440",
+   "license" : [
+      "artistic_2"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Dist-Zilla-Plugin-OurPkgVersion",
+   "no_index" : {
+      "directory" : [
+         "corpus"
+      ],
+      "file" : [
+         "perlcritic.rc"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : 0,
+            "Dist::Zilla::Role::FileFinderUser" : 0,
+            "Dist::Zilla::Role::FileMunger" : 0,
+            "Moose" : 0,
+            "PPI" : 0,
+            "namespace::autoclean" : 0,
+            "perl" : "5.006"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Dist::Zilla::Tester" : 0,
+            "English" : 0,
+            "File::Find" : 0,
+            "File::Temp" : 0,
+            "Scalar::Util" : 0,
+            "Test::More" : "0.94"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "http://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion/issues"
+      },
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion.git",
+         "web" : "http://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion"
+      }
+   },
+   "version" : "0.1.6"
+}
+
