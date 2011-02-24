@@ -80,25 +80,6 @@ DESCRIPTION
     inserting it there is a good idea. OurPkgVersion will not insert a
     version unless you have "# VERSION" so it is a bit more work.
 
-METHODS
-    munge_files
-        Override the default provided by Dist::Zilla::Role::FileMunger to
-        limit the number of files to search to only be modules and
-        executables.
-
-    munge_file
-        tells which files to munge, see Dist::Zilla::Role::FileMunger
-
-AUTHOR
-    Caleb Cushing <xenoterracide@gmail.com>
-
-COPYRIGHT AND LICENSE
-    This software is Copyright (c) 2011 by Caleb Cushing.
-
-    This is free software, licensed under:
-
-      The Artistic License 2.0 (GPL Compatible)
-
 SUPPORT
   Perldoc
     You can find documentation for this module with the perldoc command.
@@ -146,13 +127,16 @@ SUPPORT
         <http://matrix.cpantesters.org/?dist=Dist-Zilla-Plugin-OurPkgVersion
         >
 
+  Email
+    You can email the author of this module at xenoterracide@gmail.com
+    asking for help with any problems you have.
+
   Bugs / Feature Requests
-    Please report any bugs or feature requests by email to
-    "bug-dist-zilla-plugin-ourpkgversion at rt.cpan.org", or through the web
-    interface at
-    <http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Dist-Zilla-Plugin-OurPkg
-    Version>. You will be automatically notified of any progress on the
-    request by the system.
+    Please report any bugs or feature requests by email to {EMAIL}, or
+    through the web interface at
+    <http://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion/issues>
+    . You will be automatically notified of any progress on the request by
+    the system.
 
   Source Code
     The code is open to the world, and available for you to hack on. Please
@@ -163,4 +147,23 @@ SUPPORT
     <http://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion>
 
       git clone git://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion.git
+
+METHODS
+    munge_files
+        Override the default provided by Dist::Zilla::Role::FileMunger to
+        limit the number of files to search to only be modules and
+        executables.
+
+    munge_file
+        tells which files to munge, see Dist::Zilla::Role::FileMunger
+
+AUTHOR
+    Caleb Cushing <xenoterracide@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is Copyright (c) 2011 by Caleb Cushing.
+
+    This is free software, licensed under:
+
+      The Artistic License 2.0 (GPL Compatible)
 

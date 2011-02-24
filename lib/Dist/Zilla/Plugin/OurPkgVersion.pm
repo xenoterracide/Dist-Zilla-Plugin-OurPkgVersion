@@ -156,33 +156,6 @@ you've written C<# VERSION> regardless of whether or not inserting it there is
 a good idea. OurPkgVersion will not insert a version unless you have C<#
 VERSION> so it is a bit more work.
 
-=head1 METHODS
-
-=over
-
-=item munge_files
-
-Override the default provided by L<Dist::Zilla::Role::FileMunger> to limit
-the number of files to search to only be modules and executables.
-
-=item munge_file
-
-tells which files to munge, see L<Dist::Zilla::Role::FileMunger>
-
-=back
-
-=head1 AUTHOR
-
-Caleb Cushing <xenoterracide@gmail.com>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is Copyright (c) 2011 by Caleb Cushing.
-
-This is free software, licensed under:
-
-  The Artistic License 2.0 (GPL Compatible)
-
 =for :stopwords cpan testmatrix url annocpan anno bugtracker rt cpants kwalitee diff irc mailto metadata placeholders
 
 =head1 SUPPORT
@@ -250,10 +223,14 @@ L<http://matrix.cpantesters.org/?dist=Dist-Zilla-Plugin-OurPkgVersion>
 
 =back
 
+=head2 Email
+
+You can email the author of this module at xenoterracide@gmail.com asking for help with any problems you have.
+
 =head2 Bugs / Feature Requests
 
-Please report any bugs or feature requests by email to C<bug-dist-zilla-plugin-ourpkgversion at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Dist-Zilla-Plugin-OurPkgVersion>. You will be automatically notified of any
+Please report any bugs or feature requests by email to {EMAIL}, or through
+the web interface at L<http://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion/issues>. You will be automatically notified of any
 progress on the request by the system.
 
 =head2 Source Code
@@ -265,6 +242,33 @@ from your repository :)
 L<http://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion>
 
   git clone git://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion.git
+
+=head1 METHODS
+
+=over
+
+=item munge_files
+
+Override the default provided by L<Dist::Zilla::Role::FileMunger> to limit
+the number of files to search to only be modules and executables.
+
+=item munge_file
+
+tells which files to munge, see L<Dist::Zilla::Role::FileMunger>
+
+=back
+
+=head1 AUTHOR
+
+Caleb Cushing <xenoterracide@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2011 by Caleb Cushing.
+
+This is free software, licensed under:
+
+  The Artistic License 2.0 (GPL Compatible)
 
 =cut
 
