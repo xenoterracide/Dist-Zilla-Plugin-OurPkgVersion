@@ -225,7 +225,7 @@ L<http://matrix.cpantesters.org/?dist=Dist-Zilla-Plugin-OurPkgVersion>
 
 =head2 Email
 
-You can email the author of this module at xenoterracide@gmail.com asking for help with any problems you have.
+You can email the author of this module at <xenoterracide@gmail.com> asking for help with any problems you have.
 
 =head2 Bugs / Feature Requests
 
