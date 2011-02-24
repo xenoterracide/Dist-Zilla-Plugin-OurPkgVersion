@@ -3,7 +3,7 @@ use 5.006;
 use strict;
 use warnings;
 BEGIN {
-	our $VERSION = 0.1.6;# VERSION
+	our $VERSION = '0.1.6'; # VERSION
 }
 use Moose;
 with (
@@ -182,6 +182,89 @@ This software is Copyright (c) 2011 by Caleb Cushing.
 This is free software, licensed under:
 
   The Artistic License 2.0 (GPL Compatible)
+
+=for :stopwords cpan testmatrix url annocpan anno bugtracker rt cpants kwalitee diff irc mailto metadata placeholders
+
+=head1 SUPPORT
+
+=head2 Perldoc
+
+You can find documentation for this module with the perldoc command.
+
+  perldoc Dist::Zilla::Plugin::OurPkgVersion
+
+=head2 Websites
+
+The following websites have more information about this module, and may be of help to you. As always,
+in addition to those websites please use your favorite search engine to discover more resources.
+
+=over 4
+
+=item *
+
+Search CPAN
+
+L<http://search.cpan.org/dist/Dist-Zilla-Plugin-OurPkgVersion>
+
+=item *
+
+RT: CPAN's Bug Tracker
+
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dist-Zilla-Plugin-OurPkgVersion>
+
+=item *
+
+AnnoCPAN: Annotated CPAN documentation
+
+L<http://annocpan.org/dist/Dist-Zilla-Plugin-OurPkgVersion>
+
+=item *
+
+CPAN Ratings
+
+L<http://cpanratings.perl.org/d/Dist-Zilla-Plugin-OurPkgVersion>
+
+=item *
+
+CPAN Forum
+
+L<http://cpanforum.com/dist/Dist-Zilla-Plugin-OurPkgVersion>
+
+=item *
+
+CPANTS Kwalitee
+
+L<http://cpants.perl.org/dist/overview/Dist-Zilla-Plugin-OurPkgVersion>
+
+=item *
+
+CPAN Testers Results
+
+L<http://cpantesters.org/distro/D/Dist-Zilla-Plugin-OurPkgVersion.html>
+
+=item *
+
+CPAN Testers Matrix
+
+L<http://matrix.cpantesters.org/?dist=Dist-Zilla-Plugin-OurPkgVersion>
+
+=back
+
+=head2 Bugs / Feature Requests
+
+Please report any bugs or feature requests by email to C<bug-dist-zilla-plugin-ourpkgversion at rt.cpan.org>, or through
+the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Dist-Zilla-Plugin-OurPkgVersion>. You will be automatically notified of any
+progress on the request by the system.
+
+=head2 Source Code
+
+The code is open to the world, and available for you to hack on. Please feel free to browse it and play
+with it, or whatever. If you want to contribute patches, please send me a diff or prod me to pull
+from your repository :)
+
+L<http://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion>
+
+  git clone git://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion.git
 
 =cut
 
