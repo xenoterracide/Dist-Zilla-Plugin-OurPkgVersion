@@ -1,6 +1,6 @@
 Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
-0.1.6     2011-02-24
+0.1.6     2011-03-15
 
 0.1.5     2011-02-21
 	- CRITICAL: fix bug where version number wasn't quoted. This would make
