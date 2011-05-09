@@ -35,4 +35,4 @@ requires:
 resources:
   bugtracker: http://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion/issues
   repository: git://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion.git
-version: v0.1.6
+version: v0.1.7
