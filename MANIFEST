@@ -30,5 +30,4 @@ t/release-pod-linkcheck.t
 t/release-pod-spell.t
 t/release-pod-syntax.t
 t/release-portability.t
-t/release-synopsis.t
 t/release-unused-vars.t
