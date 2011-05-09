@@ -18,3 +18,5 @@ our $VERSION = 'v0.1.0'; # VERSION
 END LIB
 
 is ( $lib, $expected_lib, 'check vDZT.pm' );
+
+done_testing;
