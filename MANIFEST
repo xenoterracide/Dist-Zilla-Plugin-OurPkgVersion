@@ -11,12 +11,14 @@ corpus/DZT/lib/DZT1.pm
 corpus/DZT/lib/DZT2.pm
 corpus/DZT/t/basic.t
 corpus/vDZT/dist.ini
+corpus/vDZT/lib/vDZT.pm
 docs/SubmittingPatches.pod
 lib/Dist/Zilla/Plugin/OurPkgVersion.pm
 perlcritic.rc
 t/00-compile.t
 t/000-report-versions.t
 t/01-basic.t
+t/02-vstring.t
 t/author-critic.t
 t/release-cpan-changes.t
 t/release-dist-manifest.t
