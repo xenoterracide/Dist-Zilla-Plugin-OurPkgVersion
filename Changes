@@ -2,6 +2,12 @@ Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
 {{$NEXT}}
 
+0.1.6     2011-05-09
+	- version sanity checking now done the same way as PkgVersion
+	- above allows for vstring, e.g 'v3.3.2', style versions, issue #2
+	- use TestMania
+	- add MetaJSON
+
 0.1.5     2011-02-21
 	- CRITICAL: fix bug where version number wasn't quoted. This would make
 	  multipart versions (e.g. 0.1.0) not evaluate correctly, if you've used
