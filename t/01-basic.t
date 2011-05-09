@@ -2,9 +2,9 @@
 use strict;
 use warnings;
 use Test::More;
-use Dist::Zilla::Tester;
+use Test::DZil;
 
-my $tzil = Dist::Zilla::Tester->from_config({ dist_root => 'corpus/DZT' });
+my $tzil = Builder->from_config({ dist_root => 'corpus/DZT' });
 
 $tzil->build;
 

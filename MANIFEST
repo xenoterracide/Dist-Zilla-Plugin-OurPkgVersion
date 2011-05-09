@@ -10,6 +10,7 @@ corpus/DZT/lib/DZT0.pm
 corpus/DZT/lib/DZT1.pm
 corpus/DZT/lib/DZT2.pm
 corpus/DZT/t/basic.t
+corpus/vDZT/dist.ini
 docs/SubmittingPatches.pod
 lib/Dist/Zilla/Plugin/OurPkgVersion.pm
 perlcritic.rc
