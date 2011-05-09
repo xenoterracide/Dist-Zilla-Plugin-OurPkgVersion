@@ -1,5 +1,7 @@
 Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
+v0.1.6    2011-05-09
+
 0.1.6     2011-05-09
 	- version sanity checking now done the same way as PkgVersion
 	- above allows for vstring, e.g 'v3.3.2', style versions, issue #2
