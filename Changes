@@ -1,6 +1,6 @@
 Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
-v0.1.7    2011-05-09
+0.1.7     2011-05-23
 
 0.1.6     2011-05-09
 	- version sanity checking now done the same way as PkgVersion
