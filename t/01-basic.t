@@ -3,6 +3,7 @@ use strict;
 use warnings;
 use Test::More;
 use Test::DZil;
+use Test::Version qw( version_ok );
 
 my $tzil = Builder->from_config({ dist_root => 'corpus/DZT' });
 
@@ -52,5 +53,8 @@ is ( $lib_0, $elib_0, 'check DZT0.pm' );
 is ( $lib_1, $elib_1, 'check DZT1.pm' );
 is ( $lib_2, $elib_2, 'check DZT2.pm' );
 is ( $tst_0, $etst_0, 'check basic.t' );
+
+version_ok( $lib_0 );
+version_ok( $lib_1 );
 
 done_testing;

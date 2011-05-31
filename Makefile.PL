@@ -17,7 +17,8 @@ my %WriteMakefileArgs = (
     'File::Temp' => '0',
     'Scalar::Util' => '0',
     'Test::DZil' => '0',
-    'Test::More' => '0.94'
+    'Test::More' => '0.94',
+    'Test::Version' => '0'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.30'
