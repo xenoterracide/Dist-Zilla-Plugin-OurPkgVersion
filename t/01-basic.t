@@ -54,7 +54,6 @@ is ( $lib_1, $elib_1, 'check DZT1.pm' );
 is ( $lib_2, $elib_2, 'check DZT2.pm' );
 is ( $tst_0, $etst_0, 'check basic.t' );
 
-version_ok( "$lib_0" );
-version_ok( "$lib_1" );
+version_ok( $tzil->tempdir->file('build/lib/DZT0.pm');
 
 done_testing;
