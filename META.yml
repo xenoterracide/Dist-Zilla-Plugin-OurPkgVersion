@@ -9,7 +9,7 @@ build_requires:
   Scalar::Util: 0
   Test::DZil: 0
   Test::More: 0.94
-  Test::Version: 0
+  Test::Version: 0.04
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
@@ -36,4 +36,4 @@ requires:
 resources:
   bugtracker: http://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion/issues
   repository: git://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion.git
-version: 0.1.7
+version: 0.1.8
