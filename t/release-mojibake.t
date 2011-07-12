@@ -10,7 +10,8 @@ BEGIN {
 
 use Test::More;
 
-eval "use Test::HasVersion";
-plan skip_all => "Test::HasVersion required for testing version numbers"
-  if $@;
-all_pm_version_ok();
+eval 'use Test::Mojibake';
+plan skip_all => 'Test::Mojibake required for source encoding testing'
+    if $@;
+
+all_files_encoding_ok();
