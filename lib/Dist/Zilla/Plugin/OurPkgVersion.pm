@@ -40,6 +40,7 @@ sub munge_file {
 
 	my $comments = $doc->find('PPI::Token::Comment');
 
+	my $munged_version = 0;
 	if ( ref($comments) eq 'ARRAY' ) {
 		foreach ( @{ $comments } ) {
 			if ( /^(\s*)(\#\s+VERSION\b)$/xms ) {
@@ -51,15 +52,15 @@ sub munge_file {
 						. qq{'; $comment\n}
 						;
 				$_->set_content("$code");
+				$file->content( $doc->serialize );
+				$munged_version++;
 			}
 		}
-		$file->content( $doc->serialize );
 	}
-	else {
+
+	unless ( $munged_version ) {
 		my $fn = $file->name;
-		$self->log( "File: $fn"
-			. ' has no comments, consider adding a "# VERSION" comment'
-			);
+		$self->log( "Skipping $fn" . ': has no "# VERSION" comment' );
 	}
 	return;
 }
