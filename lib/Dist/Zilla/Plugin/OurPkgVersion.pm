@@ -58,7 +58,7 @@ sub munge_file {
 	else {
 		my $fn = $file->name;
 		$self->log( "File: $fn"
-			. ' has no comments, consider adding a "# VERSION" commment'
+			. ' has no comments, consider adding a "# VERSION" comment'
 			);
 	}
 	return;

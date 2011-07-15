@@ -57,4 +57,10 @@ is ( $lib_1, $elib_1, 'check DZT1.pm' );
 is ( $lib_2, $elib_2, 'check DZT2.pm' );
 is ( $tst_0, $etst_0, 'check basic.t' );
 
+like ( 
+  join( "\n", map { $_->{message} } @{ $tzil->chrome->logger->events } ),
+  qr{File: lib/DZT2\.pm has no comments, consider adding a "# VERSION" comment},
+  'warn no #VERSION in DZT2.pm'
+);
+
 done_testing;
