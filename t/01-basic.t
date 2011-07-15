@@ -80,11 +80,11 @@ is ( $lib_4, $elib_4, 'check DZT4.pm' );
 is ( $tst_0, $etst_0, 'check basic.t' );
 
 for my $file ( qw/DZT2 DZT3/ ) {
-  like ( 
-    join( "\n", map { $_->{message} } @{ $tzil->chrome->logger->events } ),
-    qr{Skipping lib/$file\.pm: has no "# VERSION" comment},
-    "warn no #VERSION in $file.pm"
-  );
+	like (
+		join( "\n", map { $_->{message} } @{ $tzil->chrome->logger->events } ),
+		qr{Skipping lib/$file\.pm: has no "# VERSION" comment},
+		"warn no #VERSION in $file.pm"
+	);
 }
 
 
