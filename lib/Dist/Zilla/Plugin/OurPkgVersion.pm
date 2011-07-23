@@ -172,6 +172,15 @@ tells which files to munge, see L<Dist::Zilla::Role::FileMunger>
 
 =back
 
+=head1 BUGS
+
+Please report any bugs or feature requests on the bugtracker website
+http://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion/issues
+
+When submitting a bug or request, please include a test-file or a
+patch to an existing test-file that illustrates the bug or desired
+feature.
+
 =head1 AUTHOR
 
 Caleb Cushing <xenoterracide@gmail.com>
