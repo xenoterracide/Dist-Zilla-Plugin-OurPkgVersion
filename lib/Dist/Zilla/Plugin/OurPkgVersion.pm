@@ -62,7 +62,10 @@ sub munge_file {
 		$self->log_debug([ 'adding $VERSION assignment to %s', $file->name ]);
 	}
 	else {
-		$self->log( 'Skipping: "' . $file->name . '" has no "# VERSION" comment' );
+		$self->log( 'Skipping: "'
+			. $file->name
+			. '" has no "# VERSION" comment'
+			);
 	}
 	return;
 }
