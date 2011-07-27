@@ -59,8 +59,8 @@ sub munge_file {
 	}
 
 	if ( $munged_version ) {
-        $self->log_debug([ 'adding $VERSION assignment to %s', $file->name ]);
-    }
+		$self->log_debug([ 'adding $VERSION assignment to %s', $file->name ]);
+	}
 	else {
 		$self->log( 'Skipping: "' . $file->name . '" has no "# VERSION" comment' );
 	}
