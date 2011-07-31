@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
-0.1.10    2011-07-31
+0.2.0     2011-07-31
+	- Add debug logging of successfully adding versions ( Christian Walde )
 
 0.1.9     2011-07-23
 	- Always warn about missing # VERSION comment ( DAGOLDEN )
