@@ -180,7 +180,7 @@ tells which files to munge, see L<Dist::Zilla::Role::FileMunger>
 =head1 BUGS
 
 Please report any bugs or feature requests on the bugtracker website
-http://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion/issues
+https://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion/issues
 
 When submitting a bug or request, please include a test-file or a
 patch to an existing test-file that illustrates the bug or desired

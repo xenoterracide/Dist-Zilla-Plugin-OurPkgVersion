@@ -4,7 +4,7 @@
       "Caleb Cushing <xenoterracide@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200012, CPAN::Meta::Converter version 2.110930",
+   "generated_by" : "Dist::Zilla version 4.200013, CPAN::Meta::Converter version 2.112150",
    "license" : [
       "artistic_2"
    ],
@@ -54,12 +54,12 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "http://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion/issues"
+         "web" : "https://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion/issues"
       },
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion.git",
-         "web" : "http://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion"
+         "web" : "https://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion"
       }
    },
    "version" : "0.2.1"
