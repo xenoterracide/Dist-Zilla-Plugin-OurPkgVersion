@@ -52,8 +52,7 @@ sub munge_file {
                       \s          # any whitespace including newlines see GH #5
                     ]*            # as many of the above as there are
                   )
-                  $               # until the EOL
-		}
+                  $               # until the EOL}
 		;
 
 	my $munged_version = 0;
