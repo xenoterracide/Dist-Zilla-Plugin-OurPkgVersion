@@ -3,7 +3,7 @@ use 5.008;
 use strict;
 use warnings;
 BEGIN {
-	our $VERSION = '0.2.1'; # VERSION
+	our $VERSION = '0.1.0'; # VERSION
 }
 use Moose;
 with (
@@ -97,7 +97,7 @@ Dist::Zilla::Plugin::OurPkgVersion - no line insertion and does Package version 
 
 =head1 VERSION
 
-version 0.2.1
+version 0.1.0
 
 =head1 SYNOPSIS
 
