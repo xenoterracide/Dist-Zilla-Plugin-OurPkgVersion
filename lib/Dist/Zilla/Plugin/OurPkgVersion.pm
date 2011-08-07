@@ -42,16 +42,15 @@ sub munge_file {
 
 
 	my $version_regex
-			= q{
-				^                  # beginning of line
-				(\s*)              # capture any whitespace before our comment
-				(\#\s+VERSION      # capture # VERSION
-					\b             # make sure it's just 'VERSION'
-				)                  # end capture
-				([[:print:]]*)     # capture any printable characters
-				(\s*)              # capture extra whitespace after
-				$                  # EOL
-			};
+		= q{^
+			(\s*)              # capture any whitespace before our comment
+			(\#\s+VERSION      # capture # VERSION
+				\b             # make sure it's just 'VERSION'
+			)                  # end capture
+			([[:print:]]*)     # capture any printable characters
+			(\s*)              # capture extra whitespace after
+			$}
+		;
 	my $munged_version = 0;
 	if ( ref($comments) eq 'ARRAY' ) {
 		foreach ( @{ $comments } ) {
