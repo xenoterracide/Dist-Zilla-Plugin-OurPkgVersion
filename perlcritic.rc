@@ -1,3 +1,2 @@
 severity = 3
 verbose  = 9
-exclude  = CodeLayout::ProhibitHardTabs ValuesAndExpressions::ProhibitImplicitNewlines

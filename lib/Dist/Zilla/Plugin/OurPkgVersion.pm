@@ -40,26 +40,16 @@ sub munge_file {
 
 	my $comments = $doc->find('PPI::Token::Comment');
 
-
-	my $version_regex
-		= q{^
-			(\s*)              # capture any whitespace before our comment
-			(\#\s+VERSION\b)     # capture # VERSION
-			[\w\s]*            # capture any printable characters
-			$}
-		;
-
 	my $munged_version = 0;
 	if ( ref($comments) eq 'ARRAY' ) {
 		foreach ( @{ $comments } ) {
-			if ( m/$version_regex/xms ) {
-				my ( $ws, $comment ) = ( $1, $2 );
+			if ( /^(\s*)(\#\s+VERSION\b)$/xms ) {
+				my ( $ws, $comment ) =  ( $1, $2 );
 				my $code
 						= "$ws"
 						. q{our $VERSION = '}
 						. $version
-						. q{'; }
-						. $comment
+						. qq{'; $comment\n}
 						;
 				$_->set_content("$code");
 				$file->content( $doc->serialize );
