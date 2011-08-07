@@ -63,7 +63,7 @@ sub munge_file {
 						= "$ws"
 						. q{our $VERSION = '}
 						. $version
-						. q{';}
+						. q{'; }
 						. $comment
 						. $extra
 						;
