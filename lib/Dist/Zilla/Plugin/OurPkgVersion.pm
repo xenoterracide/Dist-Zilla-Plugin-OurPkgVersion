@@ -43,13 +43,13 @@ sub munge_file {
 	my $munged_version = 0;
 	if ( ref($comments) eq 'ARRAY' ) {
 		foreach ( @{ $comments } ) {
-			if ( /^(\s*)(\#\s+VERSION[\b\w\s]*)$/xms ) {
+			if ( /^(\s*)(\#\s+VERSION\b[\w\s]*)$/xms ) {
 				my ( $ws, $comment ) =  ( $1, $2 );
 				my $code
 						= "$ws"
 						. q{our $VERSION = '}
 						. $version
-						. qq{'; $comment\n}
+						. qq{'; $comment}
 						;
 				$_->set_content("$code");
 				$file->content( $doc->serialize );
