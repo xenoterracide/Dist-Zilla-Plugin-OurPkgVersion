@@ -48,7 +48,7 @@ sub munge_file {
 				\b             # and ensure it ends on a word boundary
 				[
 					[:print:]  # all printable characters after VERSION
-					\s         # any whitespace including newlines
+					\s         # any whitespace including newlines see GH #5
 				]*             # till the EOL
 			)
 			$}
