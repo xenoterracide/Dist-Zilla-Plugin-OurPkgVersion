@@ -47,8 +47,8 @@ sub munge_file {
 				(\s*)              # capture any whitespace before our comment
 				(\#\s+VERSION      # capture # VERSION
 					\b             # make sure it's just 'VERSION'
-					[[[:print:]]*] # capture any printable characters
 				)                  # end capture
+				([[:print:]]*)     # capture any printable characters
 				(\s*)              # capture extra whitespace after
 				$                  # EOL
 			};
@@ -56,7 +56,7 @@ sub munge_file {
 	if ( ref($comments) eq 'ARRAY' ) {
 		foreach ( @{ $comments } ) {
 			if ( m/$version_regex/xms ) {
-				my ( $ws, $comment, $trailing_ws ) = ( $1, $2, $3 );
+				my ( $ws, $comment, $extra, $trailing_ws ) = ( $1, $2, $3, $4 );
 				if ( defined $trailing_ws ) {
 					$self->log_debug( 'found trailing whitespace' );
 				}
@@ -66,6 +66,7 @@ sub munge_file {
 						. $version
 						. q{';}
 						. $comment
+						. $extra
 						;
 				$_->set_content("$code");
 				$file->content( $doc->serialize );
