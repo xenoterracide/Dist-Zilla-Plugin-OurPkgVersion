@@ -51,7 +51,7 @@ sub munge_file {
 				)                # end capture
 				(\s*)            # capture extra whitespace after
 				$                # EOL
-			}
+			};
 	my $munged_version = 0;
 	if ( ref($comments) eq 'ARRAY' ) {
 		foreach ( @{ $comments } ) {
