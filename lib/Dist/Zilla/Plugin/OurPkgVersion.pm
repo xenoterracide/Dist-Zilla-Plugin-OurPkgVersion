@@ -42,8 +42,15 @@ sub munge_file {
 
 	my $version_regex
 		= q{^
-			(\s*)
-			(\#\s+VERSION\b[[:print:]\s]*)
+			(\s*)              # capture all whitespace before comment
+			(
+				\#\s+VERSION   # capture # VERSION
+				\b             # and ensure it ends on a word boundary
+				[
+					[:print:]  # all printable characters after VERSION
+					\s         # any whitespace including newlines
+				]*             # till the EOL
+			)
 			$}
 		;
 
