@@ -40,10 +40,13 @@ sub munge_file {
 
 	my $comments = $doc->find('PPI::Token::Comment');
 
+	my $version_regex
+		= q{^(\s*)(\#\s+VERSION\b[[:print:]\s]*)$};
+
 	my $munged_version = 0;
 	if ( ref($comments) eq 'ARRAY' ) {
 		foreach ( @{ $comments } ) {
-			if ( /^(\s*)(\#\s+VERSION\b[[:print:]\s]*)$/xms ) {
+			if ( /$version_regex/xms ) {
 				my ( $ws, $comment ) =  ( $1, $2 );
 				my $code
 						= "$ws"
