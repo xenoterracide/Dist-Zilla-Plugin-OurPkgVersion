@@ -41,7 +41,7 @@ sub munge_file {
 	my $comments = $doc->find('PPI::Token::Comment');
 
 
-	my $version_regex ## no critic
+	my $version_regex
 		= q{^
 			(\s*)              # capture any whitespace before our comment
 			(\#\s+VERSION)     # capture # VERSION
