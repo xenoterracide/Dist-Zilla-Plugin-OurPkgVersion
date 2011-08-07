@@ -42,13 +42,13 @@ sub munge_file {
 
 
 	my $version_regex
-		= q{^
+		= q{^ ## no critic (CodeLayout::ProhibitHardTabs)
 			(\s*)              # capture any whitespace before our comment
 			(\#\s+VERSION)     # capture # VERSION
 			\b                 # make sure it's just 'VERSION'
 			[\w\s]*            # capture any printable characters
 			$}
-		; ## no critic (CodeLayout::ProhibitHardTabs)
+		;
 
 	my $munged_version = 0;
 	if ( ref($comments) eq 'ARRAY' ) {
