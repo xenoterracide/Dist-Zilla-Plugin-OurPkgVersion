@@ -47,18 +47,14 @@ sub munge_file {
 			(\#\s+VERSION      # capture # VERSION
 				\b             # make sure it's just 'VERSION'
 			)                  # end capture
-			([[:print:]]*)     # capture any printable characters
-			(\s*)              # capture extra whitespace after
+			[\w\s]*    # capture any printable characters
 			$}
 		;
 	my $munged_version = 0;
 	if ( ref($comments) eq 'ARRAY' ) {
 		foreach ( @{ $comments } ) {
 			if ( m/$version_regex/xms ) {
-				my ( $ws, $comment, $extra, $trailing_ws ) = ( $1, $2, $3, $4 );
-				if ( defined $trailing_ws ) {
-					$self->log_debug( 'found trailing whitespace' );
-				}
+				my ( $ws, $comment ) = ( $1, $2 );
 				my $code
 						= "$ws"
 						. q{our $VERSION = '}
