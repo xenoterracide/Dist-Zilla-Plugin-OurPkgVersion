@@ -201,6 +201,24 @@ When submitting a bug or request, please include a test-file or a
 patch to an existing test-file that illustrates the bug or desired
 feature.
 
+=head1 ACKNOWLEDGEMENTS
+
+=over
+
+=item *
+
+David Golden
+
+=item *
+
+Christian Walde
+
+=item *
+
+Alexei Znamensky
+
+=back
+
 =head1 AUTHOR
 
 Caleb Cushing <xenoterracide@gmail.com>
