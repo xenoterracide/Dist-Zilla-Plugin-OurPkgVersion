@@ -61,7 +61,6 @@ sub munge_file {
 						. $version
 						. q{'; }
 						. $comment
-						. $extra
 						;
 				$_->set_content("$code");
 				$file->content( $doc->serialize );
