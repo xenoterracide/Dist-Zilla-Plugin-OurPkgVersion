@@ -41,14 +41,14 @@ sub munge_file {
 	my $comments = $doc->find('PPI::Token::Comment');
 
 
-	my $version_regex ## no critic ( CodeLayout::ProhibitHardTabs ValuesAndExpressions::ProhibitImplicitNewlines )
+	my $version_regex
 		= q{^
 			(\s*)              # capture any whitespace before our comment
 			(\#\s+VERSION)     # capture # VERSION
 			\b                 # make sure it's just 'VERSION'
 			[\w\s]*            # capture any printable characters
 			$}
-		;
+		; ## no critic ( CodeLayout::ProhibitHardTabs ValuesAndExpressions::ProhibitImplicitNewlines )
 
 	my $munged_version = 0;
 	if ( ref($comments) eq 'ARRAY' ) {
