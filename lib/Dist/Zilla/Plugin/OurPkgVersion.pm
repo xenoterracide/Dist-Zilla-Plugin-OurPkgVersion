@@ -42,12 +42,12 @@ sub munge_file {
 
 
 	my $version_regex
-		= qq{^
+		= q{^
 			(\s*)              # capture any whitespace before our comment
 			(\#\s+VERSION      # capture # VERSION
 				\b             # make sure it's just 'VERSION'
 			)                  # end capture
-			[\w\s]*    # capture any printable characters
+			[\w\s]*            # capture any printable characters
 			$}
 		;
 	my $munged_version = 0;
