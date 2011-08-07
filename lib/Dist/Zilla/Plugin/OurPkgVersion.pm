@@ -44,7 +44,7 @@ sub munge_file {
 	my $version_regex
 		= q{^
 			(\s*)              # capture any whitespace before our comment
-			(\#\s+VERSION)\b     # capture # VERSION
+			(\#\s+VERSION\b)     # capture # VERSION
 			[\w\s]*            # capture any printable characters
 			$}
 		;
