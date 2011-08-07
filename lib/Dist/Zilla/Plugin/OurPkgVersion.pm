@@ -41,7 +41,7 @@ sub munge_file {
 	my $comments = $doc->find('PPI::Token::Comment');
 
 
-	my $version_regex
+	my $version_regex ## no critic ( ProhibitHardTabs )
 		= q{^
 			(\s*)              # capture any whitespace before our comment
 			(\#\s+VERSION)     # capture # VERSION
@@ -49,6 +49,7 @@ sub munge_file {
 			[\w\s]*            # capture any printable characters
 			$}
 		;
+
 	my $munged_version = 0;
 	if ( ref($comments) eq 'ARRAY' ) {
 		foreach ( @{ $comments } ) {
