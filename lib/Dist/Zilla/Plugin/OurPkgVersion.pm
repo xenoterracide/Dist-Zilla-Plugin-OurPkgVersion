@@ -42,7 +42,7 @@ sub munge_file {
 
 
 	my $version_regex
-		= q{^
+		= qq{^
 			(\s*)              # capture any whitespace before our comment
 			(\#\s+VERSION      # capture # VERSION
 				\b             # make sure it's just 'VERSION'
