@@ -43,7 +43,7 @@ sub munge_file {
 	my $munged_version = 0;
 	if ( ref($comments) eq 'ARRAY' ) {
 		foreach ( @{ $comments } ) {
-			if ( /^(\s*)(\#\s+VERSION\b)$/xms ) {
+			if ( /^(\s*)(\#\s+VERSION\b)[\w\s]+$/xms ) {
 				my ( $ws, $comment ) =  ( $1, $2 );
 				my $code
 						= "$ws"
