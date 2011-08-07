@@ -41,17 +41,18 @@ sub munge_file {
 	my $comments = $doc->find('PPI::Token::Comment');
 
 	my $version_regex
-		= q{^
-            (\s*)                      # capture all whitespace before comment
-            (
-                \#\s+VERSION           # capture # VERSION
-                \b                     # and ensure it ends on a word boundary
-                [
-                    [:print:]          # all printable characters after VERSION
-                    \s                 # any whitespace including newlines see GH #5
-                ]*                     # till the EOL
-            )
-            $}
+		= q{
+                  ^
+                  (\s*)           # capture all whitespace before comment
+                  (
+                    \#\s+VERSION  # capture # VERSION
+                    \b            # and ensure it ends on a word boundary
+                    [             # conditionally
+                      [:print:]   # all printable characters after VERSION
+                      \s          # any whitespace including newlines see GH #5
+                    ]*            # as many of the above as there are
+                  )
+                  $               # until the EOL}
 		;
 
 	my $munged_version = 0;
