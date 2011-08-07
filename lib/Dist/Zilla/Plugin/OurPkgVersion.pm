@@ -40,16 +40,32 @@ sub munge_file {
 
 	my $comments = $doc->find('PPI::Token::Comment');
 
+
+	my $version_regex
+			= q{
+				^                # beginning of line
+				(\s*)            # capture any whitespace before our comment
+				(\#\s+VERSION    # capture # VERSION
+					\b           # make sure it's just 'VERSION'
+					[[:print:]]  # capture any printable characters
+				)                # end capture
+				(\s*)            # capture extra whitespace after
+				$                # EOL
+			}
 	my $munged_version = 0;
 	if ( ref($comments) eq 'ARRAY' ) {
 		foreach ( @{ $comments } ) {
-			if ( /^(\s*)(\#\s+VERSION\b[ \t]*)$/xms ) {
-				my ( $ws, $comment ) =  ( $1, $2 );
+			if ( m/$version_regex/xms ) {
+				my ( $ws, $comment, $trailing_ws ) = ( $1, $2, $3 );
+				if ( defined $trailing_ws ) {
+					$self->log_debug( 'found trailing whitespace' );
+				}
 				my $code
 						= "$ws"
 						. q{our $VERSION = '}
 						. $version
-						. qq{'; $comment\n}
+						. q{';}
+						. $comment
 						;
 				$_->set_content("$code");
 				$file->content( $doc->serialize );

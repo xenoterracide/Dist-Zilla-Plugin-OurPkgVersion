@@ -2,8 +2,6 @@ Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
 0.2.1     2011-08-07
 
-        - Allow trailing spaces after '#VERSION' ( DAGOLDEN )
-
 0.2.0     2011-07-31
 	- Add debug logging of successfully adding versions ( Christian Walde )
 
