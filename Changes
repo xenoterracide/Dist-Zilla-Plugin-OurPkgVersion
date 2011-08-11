@@ -2,11 +2,20 @@ Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
 {{$NEXT}}
 
+v0.3.0    2011-08-10
+	- Allow text after # VERSION comment, see docs for example
+	  Github Issue #5
+      Reported by David Golden
+
 0.2.0     2011-07-31
-	- Add debug logging of successfully adding versions ( Christian Walde )
+	- Add debug logging of successfully adding versions
+	  Github Issue #4
+	  Patch by Christian Walde
 
 0.1.9     2011-07-23
-	- Always warn about missing # VERSION comment ( DAGOLDEN )
+	- Always warn about missing # VERSION comment
+	  Github Issue #3
+	  Patch by David Golden
 
 0.1.8     2011-06-01
 	- Testing depends on Test::Version 0.04 or later
@@ -16,7 +25,9 @@ Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
 0.1.6     2011-05-09
 	- version sanity checking now done the same way as PkgVersion
-	- above allows for vstring, e.g 'v3.3.2', style versions, issue #2
+	- above allows for vstring, e.g 'v3.3.2', style versions,
+	  Github Issue #2
+	  Reported by Mike Doherty
 	- use TestMania
 	- add MetaJSON
 
@@ -33,7 +44,8 @@ Revision history for Dist-Zilla-Plugin-OurPkgVersion
 0.1.3     2010-11-06
 	- Add basic tests specific to this distribution
 	- Add better error handling if no comments present
-		- See GitHub Bug #1
+	  GitHub Issue #1
+	  Reported by Stephen Clouse
 	- remove cruft copied from PkgVersion that wasn't necessary
 
 0.1.2     2010-08-07
