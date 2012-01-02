@@ -15,9 +15,8 @@ my %WriteMakefileArgs = (
     "English" => 0,
     "File::Find" => 0,
     "File::Temp" => 0,
-    "Scalar::Util" => 0,
     "Test::DZil" => 0,
-    "Test::More" => "0.94",
+    "Test::More" => "0.88",
     "Test::Requires" => 0,
     "Test::Version" => "0.04"
   },
