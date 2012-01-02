@@ -39,4 +39,4 @@ resources:
   bugtracker: https://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion/issues
   homepage: http://search.cpan.org/dist/Dist-Zilla-Plugin-OurPkgVersion/
   repository: git://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion.git
-version: v0.3.1
+version: 0.003001
