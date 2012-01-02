@@ -36,7 +36,12 @@ sub munge_file {
 	my $content = $file->content;
 
 	my $doc = PPI::Document->new(\$content)
-		or croak( PPI::Document->errstr );
+		or croak( 'Error parsing "'
+			. $file->name
+			.  '" with PPI: '
+			. PPI::Document->errstr
+			)
+			;
 
 	my $comments = $doc->find('PPI::Token::Comment');
 
