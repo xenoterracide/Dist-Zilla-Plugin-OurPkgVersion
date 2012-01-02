@@ -19,6 +19,7 @@ docs/SubmittingPatches.pod
 lib/Dist/Zilla/Plugin/OurPkgVersion.pm
 perlcritic.rc
 t/00-compile.t
+t/000-report-versions-tiny.t
 t/000-report-versions.t
 t/01-basic.t
 t/02-vstring.t
