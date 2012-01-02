@@ -9,11 +9,12 @@ build_requires:
   Scalar::Util: 0
   Test::DZil: 0
   Test::More: 0.94
+  Test::Requires: 0
   Test::Version: 0.04
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200014, CPAN::Meta::Converter version 2.112150'
+generated_by: 'Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.113640'
 license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -33,7 +34,10 @@ requires:
   PPI: 0
   namespace::autoclean: 0
   perl: 5.008
+  strict: 0
+  warnings: 0
 resources:
   bugtracker: https://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion/issues
+  homepage: http://search.cpan.org/dist/Dist-Zilla-Plugin-OurPkgVersion/
   repository: git://github.com/xenoterracide/Dist-Zilla-Plugin-OurPkgVersion.git
-version: v0.3.0
+version: 0.003001

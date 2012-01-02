@@ -9,36 +9,39 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'no line insertion and does Package version with our',
-  'AUTHOR' => 'Caleb Cushing <xenoterracide@gmail.com>',
-  'BUILD_REQUIRES' => {
-    'English' => '0',
-    'File::Find' => '0',
-    'File::Temp' => '0',
-    'Scalar::Util' => '0',
-    'Test::DZil' => '0',
-    'Test::More' => '0.94',
-    'Test::Version' => '0.04'
+  "ABSTRACT" => "no line insertion and does Package version with our",
+  "AUTHOR" => "Caleb Cushing <xenoterracide\@gmail.com>",
+  "BUILD_REQUIRES" => {
+    "English" => 0,
+    "File::Find" => 0,
+    "File::Temp" => 0,
+    "Scalar::Util" => 0,
+    "Test::DZil" => 0,
+    "Test::More" => "0.94",
+    "Test::Requires" => 0,
+    "Test::Version" => "0.04"
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'Dist-Zilla-Plugin-OurPkgVersion',
-  'EXE_FILES' => [],
-  'LICENSE' => 'artistic_2',
-  'NAME' => 'Dist::Zilla::Plugin::OurPkgVersion',
-  'PREREQ_PM' => {
-    'Carp' => '0',
-    'Dist::Zilla::Role::FileFinderUser' => '0',
-    'Dist::Zilla::Role::FileMunger' => '0',
-    'Moose' => '0',
-    'MooseX::Types::Perl' => '0',
-    'PPI' => '0',
-    'namespace::autoclean' => '0'
+  "DISTNAME" => "Dist-Zilla-Plugin-OurPkgVersion",
+  "EXE_FILES" => [],
+  "LICENSE" => "artistic_2",
+  "NAME" => "Dist::Zilla::Plugin::OurPkgVersion",
+  "PREREQ_PM" => {
+    "Carp" => 0,
+    "Dist::Zilla::Role::FileFinderUser" => 0,
+    "Dist::Zilla::Role::FileMunger" => 0,
+    "Moose" => 0,
+    "MooseX::Types::Perl" => 0,
+    "PPI" => 0,
+    "namespace::autoclean" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
-  'VERSION' => 'v0.3.0',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.003001",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

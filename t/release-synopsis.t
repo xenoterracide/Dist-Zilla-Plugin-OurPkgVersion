@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!perl
 
 BEGIN {
   unless ($ENV{RELEASE_TESTING}) {
@@ -7,14 +7,10 @@ BEGIN {
   }
 }
 
-use 5.006;
-use strict;
-use warnings;
+
 use Test::More;
 
-use Test::Requires {
-    'Test::Version' => 0.04,
-};
-
-version_all_ok;
-done_testing;
+eval "use Test::Synopsis";
+plan skip_all => "Test::Synopsis required for testing synopses"
+  if $@;
+all_synopsis_ok('lib');

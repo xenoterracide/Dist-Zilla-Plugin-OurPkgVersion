@@ -21,14 +21,12 @@ plan skip_all => "Test::Spelling 0.12 required for testing POD spelling"
 
 
 add_stopwords(<DATA>);
-all_pod_files_spelling_ok('lib');
+all_pod_files_spelling_ok('bin', 'lib');
 __DATA__
 SubmittingPatches
 dzil
 OurPkgVersion
 ini
 executables
-Caleb
-Cushing
 Caleb
 Cushing

@@ -3,7 +3,7 @@ use 5.008;
 use strict;
 use warnings;
 BEGIN {
-	our $VERSION = 'v0.3.0'; # VERSION
+	our $VERSION = '0.003001'; # VERSION
 }
 use Moose;
 with (
@@ -36,7 +36,12 @@ sub munge_file {
 	my $content = $file->content;
 
 	my $doc = PPI::Document->new(\$content)
-		or croak( PPI::Document->errstr );
+		or croak( 'Error parsing "'
+			. $file->name
+			.  '" with PPI: '
+			. PPI::Document->errstr
+			)
+			;
 
 	my $comments = $doc->find('PPI::Token::Comment');
 
@@ -98,7 +103,7 @@ Dist::Zilla::Plugin::OurPkgVersion - no line insertion and does Package version 
 
 =head1 VERSION
 
-version v0.3.0
+version 0.003001
 
 =head1 SYNOPSIS
 
@@ -219,7 +224,7 @@ Caleb Cushing <xenoterracide@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2011 by Caleb Cushing.
+This software is Copyright (c) 2012 by Caleb Cushing.
 
 This is free software, licensed under:
 

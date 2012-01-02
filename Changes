@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
+0.003001  2012-01-01
+	- Provide a better error message if PPI fails
+
 v0.3.0    2011-08-10
 	- Allow text after # VERSION comment, see docs for example
 	  Github Issue #5
