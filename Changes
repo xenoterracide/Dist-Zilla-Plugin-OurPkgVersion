@@ -2,6 +2,9 @@ Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
 {{$NEXT}}
 
+0.003002  2012-01-02
+	- skip if PPI unable to parse
+
 0.003001  2012-01-01
 	- Provide a better error message if PPI fails
 
