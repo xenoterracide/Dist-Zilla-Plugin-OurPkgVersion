@@ -1,5 +1,7 @@
 Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
+0.003002  2012-01-02
+
 0.003001  2012-01-01
 	- Provide a better error message if PPI fails
 

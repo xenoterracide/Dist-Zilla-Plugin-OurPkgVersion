@@ -2,9 +2,9 @@ package Dist::Zilla::Plugin::OurPkgVersion;
 use 5.008;
 use strict;
 use warnings;
-BEGIN {
-	our $VERSION = '0.003001'; # VERSION
-}
+
+our $VERSION = '0.003002'; # VERSION
+
 use Moose;
 with (
 	'Dist::Zilla::Role::FileMunger',
@@ -36,12 +36,14 @@ sub munge_file {
 	my $content = $file->content;
 
 	my $doc = PPI::Document->new(\$content)
-		or croak( 'Error parsing "'
+		or $self->log( 'Skipping: "'
 			. $file->name
-			.  '" with PPI: '
+			.  '" error with PPI: '
 			. PPI::Document->errstr
 			)
 			;
+
+	return unless defined $doc;
 
 	my $comments = $doc->find('PPI::Token::Comment');
 
@@ -103,7 +105,7 @@ Dist::Zilla::Plugin::OurPkgVersion - no line insertion and does Package version 
 
 =head1 VERSION
 
-version 0.003001
+version 0.003002
 
 =head1 SYNOPSIS
 
