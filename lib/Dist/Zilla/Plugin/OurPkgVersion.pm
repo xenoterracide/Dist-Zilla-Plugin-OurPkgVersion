@@ -71,6 +71,7 @@ sub munge_file {
 		foreach ( @{ $comments } ) {
 			if ( /$version_regex/xms ) {
 				my ( $ws, $comment ) =  ( $1, $2 );
+				$comment =~ s/(?=\bVERSION\b)/TRIAL /x if $self->zilla->is_trial;
 				my $code
 						= "$ws"
 						. q{our $VERSION = '}
@@ -187,6 +188,14 @@ C<our $VERSION> line anywhere in the file before C<# VERSION> as many times as
 you've written C<# VERSION> regardless of whether or not inserting it there is
 a good idea. OurPkgVersion will not insert a version unless you have C<#
 VERSION> so it is a bit more work.
+
+If you make a trial release, the comment will be altered to say so:
+
+	# VERSION
+
+becomes
+
+	our $VERSION = '0.01'; # TRIAL VERSION
 
 =head1 METHODS
 
