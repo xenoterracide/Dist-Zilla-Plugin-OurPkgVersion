@@ -3,7 +3,7 @@ NAME
     version with our
 
 VERSION
-    version 0.003002
+    version 0.003003
 
 SYNOPSIS
     in dist.ini
@@ -91,6 +91,14 @@ DESCRIPTION
     as many times as you've written "# VERSION" regardless of whether or not
     inserting it there is a good idea. OurPkgVersion will not insert a
     version unless you have "# VERSION" so it is a bit more work.
+
+    If you make a trial release, the comment will be altered to say so:
+
+            # VERSION
+
+    becomes
+
+            our $VERSION = '0.01'; # TRIAL VERSION
 
 METHODS
     munge_files

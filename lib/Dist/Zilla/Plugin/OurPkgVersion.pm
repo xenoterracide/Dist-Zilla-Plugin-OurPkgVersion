@@ -3,7 +3,7 @@ use 5.008;
 use strict;
 use warnings;
 
-our $VERSION = '0.003002'; # VERSION
+our $VERSION = '0.003003'; # VERSION
 
 use Moose;
 with (
@@ -14,7 +14,6 @@ with (
 );
 
 use PPI;
-use Carp qw(croak);
 use MooseX::Types::Perl qw( LaxVersionStr );
 use namespace::autoclean;
 
@@ -28,9 +27,14 @@ sub munge_files {
 sub munge_file {
 	my ( $self, $file ) = @_;
 
+	if ( $file->name =~ m/\.pod$/ixms ) {
+		$self->log_debug( 'Skipping: "' . $file->name . '" is pod only');
+		return;
+	}
+
 	my $version = $self->zilla->version;
 
-	croak("invalid characters in version")
+	confess 'invalid characters in version'
 		unless LaxVersionStr->check( $version );
 
 	my $content = $file->content;
@@ -67,6 +71,7 @@ sub munge_file {
 		foreach ( @{ $comments } ) {
 			if ( /$version_regex/xms ) {
 				my ( $ws, $comment ) =  ( $1, $2 );
+				$comment =~ s/(?=\bVERSION\b)/TRIAL /x if $self->zilla->is_trial;
 				my $code
 						= "$ws"
 						. q{our $VERSION = '}
@@ -105,7 +110,7 @@ Dist::Zilla::Plugin::OurPkgVersion - no line insertion and does Package version 
 
 =head1 VERSION
 
-version 0.003002
+version 0.003003
 
 =head1 SYNOPSIS
 
@@ -195,6 +200,14 @@ C<our $VERSION> line anywhere in the file before C<# VERSION> as many times as
 you've written C<# VERSION> regardless of whether or not inserting it there is
 a good idea. OurPkgVersion will not insert a version unless you have C<#
 VERSION> so it is a bit more work.
+
+If you make a trial release, the comment will be altered to say so:
+
+	# VERSION
+
+becomes
+
+	our $VERSION = '0.01'; # TRIAL VERSION
 
 =head1 METHODS
 

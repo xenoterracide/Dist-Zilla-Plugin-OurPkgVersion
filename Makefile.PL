@@ -12,12 +12,10 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "no line insertion and does Package version with our",
   "AUTHOR" => "Caleb Cushing <xenoterracide\@gmail.com>",
   "BUILD_REQUIRES" => {
-    "English" => 0,
     "File::Find" => 0,
     "File::Temp" => 0,
     "Test::DZil" => 0,
     "Test::More" => "0.88",
-    "Test::Requires" => 0,
     "Test::Version" => "0.04"
   },
   "CONFIGURE_REQUIRES" => {
@@ -28,7 +26,6 @@ my %WriteMakefileArgs = (
   "LICENSE" => "artistic_2",
   "NAME" => "Dist::Zilla::Plugin::OurPkgVersion",
   "PREREQ_PM" => {
-    "Carp" => 0,
     "Dist::Zilla::Role::FileFinderUser" => 0,
     "Dist::Zilla::Role::FileMunger" => 0,
     "Moose" => 0,
@@ -38,7 +35,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.003002",
+  "VERSION" => "0.003003",
   "test" => {
     "TESTS" => "t/*.t"
   }
