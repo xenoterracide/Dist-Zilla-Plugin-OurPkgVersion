@@ -14,7 +14,6 @@ with (
 );
 
 use PPI;
-use Carp qw(croak);
 use MooseX::Types::Perl qw( LaxVersionStr );
 use namespace::autoclean;
 
@@ -30,7 +29,7 @@ sub munge_file {
 
 	my $version = $self->zilla->version;
 
-	croak("invalid characters in version")
+	confess 'invalid characters in version'
 		unless LaxVersionStr->check( $version );
 
 	my $content = $file->content;
