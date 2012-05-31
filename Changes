@@ -1,6 +1,8 @@
 Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
 {{$NEXT}}
+	- Change comment to read TRIAL VERSION for trial releases
+	  Patch by Christopher J. Madsen
 
 0.003002  2012-01-02
 	- skip if PPI unable to parse
