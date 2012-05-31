@@ -27,6 +27,11 @@ sub munge_files {
 sub munge_file {
 	my ( $self, $file ) = @_;
 
+	if ( $file->name =~ m/\.pod$/ixms ) {
+		$self->log_debug( 'Skipping: "' . $file->name . '" is pod only');
+		return;
+	}
+
 	my $version = $self->zilla->version;
 
 	confess 'invalid characters in version'
