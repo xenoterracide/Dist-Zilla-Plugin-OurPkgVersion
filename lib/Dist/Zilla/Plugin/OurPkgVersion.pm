@@ -67,7 +67,7 @@ sub munge_file {
 		foreach ( @{ $comments } ) {
 			if ( /$version_regex/xms ) {
 				my ( $ws, $comment ) =  ( $1, $2 );
-				$comment =~ s/(?=\bVERSION\b)/TRIAL / if $self->zilla->is_trial;
+				$comment =~ s/(?=\bVERSION\b)/TRIAL /x if $self->zilla->is_trial;
 				my $code
 						= "$ws"
 						. q{our $VERSION = '}
