@@ -2,6 +2,11 @@ Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
 {{$NEXT}}
 
+0.005000  2013-09-07
+	- allow comment to be #VERSION
+	  - Github Issue #9
+	  - Reported by Jakob Voss ( nichtich )
+
 0.004000  2012-05-31
 	- skip parsing .pod files Github Issue #6
 	- Change comment to read TRIAL VERSION for trial releases
