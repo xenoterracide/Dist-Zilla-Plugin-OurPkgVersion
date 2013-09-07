@@ -15,7 +15,6 @@ corpus/DZT/lib/DZT5.pm
 corpus/DZT/t/basic.t
 corpus/vDZT/dist.ini
 corpus/vDZT/lib/vDZT.pm
-docs/SubmittingPatches.pod
 lib/Dist/Zilla/Plugin/OurPkgVersion.pm
 perlcritic.rc
 t/00-compile.t

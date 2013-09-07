@@ -1,5 +1,7 @@
 Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
+0.004001  2013-09-07
+
 0.004000  2012-05-31
 	- skip parsing .pod files Github Issue #6
 	- Change comment to read TRIAL VERSION for trial releases
