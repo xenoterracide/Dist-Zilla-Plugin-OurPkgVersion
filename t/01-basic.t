@@ -77,7 +77,7 @@ our $VERSION = '0.1.0'; # VERSION: foo
 END LIB5
 
 my $elib_6 = <<'END LIB6';
-package DZT5;
+package DZT6;
 use strict;
 use warnings;
 our $VERSION = '0.1.0'; #VERSION
