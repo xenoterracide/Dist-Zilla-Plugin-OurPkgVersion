@@ -1,5 +1,7 @@
 Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
+0.005001  2013-09-07
+
 0.005000  2013-09-07
 	- allow comment to be #VERSION
 	  - Github Issue #9
