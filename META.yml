@@ -36,4 +36,4 @@ resources:
   bugtracker: https://github.com/xenoterracide/dist-zilla-plugin-ourpkgversion/issues
   homepage: https://metacpan.org/dist/Dist-Zilla-Plugin-OurPkgVersion
   repository: git://github.com/xenoterracide/dist-zilla-plugin-ourpkgversion.git
-version: 0.004001
+version: 0.005000
