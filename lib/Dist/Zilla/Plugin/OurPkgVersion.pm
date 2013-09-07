@@ -56,7 +56,7 @@ sub munge_file {
                   ^
                   (\s*)           # capture all whitespace before comment
                   (
-                    \#\s+VERSION  # capture # VERSION
+                    \#\s*VERSION  # capture # VERSION
                     \b            # and ensure it ends on a word boundary
                     [             # conditionally
                       [:print:]   # all printable characters after VERSION
