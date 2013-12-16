@@ -233,6 +233,32 @@ When submitting a bug or request, please include a test-file or a
 patch to an existing test-file that illustrates the bug or desired
 feature.
 
+=head1 CONTRIBUTORS
+
+=over 4
+
+=item *
+
+Alexandr Ciornii <alexchorny@gmail.com>
+
+=item *
+
+Alexei Znamensky <russoz@cpan.org>
+
+=item *
+
+Christian Walde <walde.christian@googlemail.com>
+
+=item *
+
+Christopher J. Madsen <perl@cjmweb.net>
+
+=item *
+
+David Golden <dagolden@cpan.org>
+
+=back
+
 =head1 AUTHOR
 
 Caleb Cushing <xenoterracide@gmail.com>

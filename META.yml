@@ -38,3 +38,9 @@ resources:
   homepage: https://metacpan.org/dist/Dist-Zilla-Plugin-OurPkgVersion
   repository: git://github.com/xenoterracide/dist-zilla-plugin-ourpkgversion.git
 version: 0.005001
+x_contributors:
+  - 'Alexandr Ciornii <alexchorny@gmail.com>'
+  - 'Alexei Znamensky <russoz@cpan.org>'
+  - 'Christian Walde <walde.christian@googlemail.com>'
+  - 'Christopher J. Madsen <perl@cjmweb.net>'
+  - 'David Golden <dagolden@cpan.org>'
