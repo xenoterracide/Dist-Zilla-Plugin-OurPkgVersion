@@ -2,6 +2,10 @@ Revision history for Dist-Zilla-Plugin-OurPkgVersion
 
 {{$NEXT}}
 
+0.005001  2013-12-16
+	- update compile test so that it doesn't hang on windows GH #11 ( chorny )
+	- add contributors plugins
+
 0.005000  2013-09-07
 	- allow comment to be #VERSION
 	  - Github Issue #9
